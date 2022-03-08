@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Examen1_120450173.View.ContactosAdd">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Añadir Registro" FontSize="Medium" HorizontalOptions="Center" BackgroundColor="Beige" TextColor="Black"/>
+
+            <Label Text="Nombre"/>
+            <Entry x:Name="nombre" Keyboard="Text" Placeholder="Nombre"/>
+
+            <Label Text="Apellido"/>
+            <Entry x:Name="apellido" Keyboard="Text" Placeholder="Apellido"/>
+
+            <Label Text="Edad"/>
+            <Entry x:Name="edad" Keyboard="Numeric" Placeholder="Edad"/>
+
+            <Picker Title="Pais" x:Name="pais"
+              TitleColor="White">
+                <Picker.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>Honduras (504)</x:String>
+                        <x:String>Mordor (???)</x:String>
+                        <x:String>Teyvat (???)</x:String>
+                        <x:String>Tierra N52 (000)</x:String>
+                        <x:String>Unknown (???)</x:String>
+                    </x:Array>
+                </Picker.ItemsSource>
+            </Picker>
+
+            <Label Text="Notas"/>
+            <Entry x:Name="notas" Keyboard="Text" Placeholder="Descripcion"/>
+
+            <Label Text="Latitud"/>
+            <Entry x:Name="latitud" Keyboard="Numeric" Placeholder="Latitud"/>
+
+            <Label Text="Longitud"/>
+            <Entry x:Name="longitud" Keyboard="Numeric" Placeholder="Longitud"/>
+
+            <Button Text="Agregar" Font="Large" BorderWidth="2" x:Name="btnagregar" Clicked="btnagregar_Clicked"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
